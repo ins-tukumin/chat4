@@ -209,7 +209,7 @@ def on_input_change():
     st.session_state.generated.append(answer)
     #with st.spinner("入力中。。。"):
             # 任意時間入力中のスピナーを長引かせたい場合はこちら！
-    time.sleep(30)
+    time.sleep(1)
     #st.session_state.past.append(user_message)
 
     st.session_state.user_message = ""
