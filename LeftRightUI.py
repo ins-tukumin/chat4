@@ -156,7 +156,7 @@ def on_input_change():
     
     user_message = st.session_state.user_message
     conversation = load_conversation()
-    with st.spinner("入力中。。。"):
+    with st.spinner("相手からの返信を待っています。。。"):
         time.sleep(5)
         answer = conversation.predict(input=user_message)
     st.session_state.generated.append(answer)
@@ -182,7 +182,7 @@ def redirect_to_url(url):
 # st.write("議論を行いましょう！")
 user_number = st.text_input("学籍番号を半角で入力してエンターを押してください")
 if user_number:
-    st.write(f"こんにちは、{user_number}さん！")
+    # st.write(f"こんにちは、{user_number}さん！")
     # 初期済みでない場合は初期化処理を行う
     if not firebase_admin._apps:
             cred = credentials.Certificate('chat4-2b25e-firebase-adminsdk-8kyxn-23d3e92aec.json') 
